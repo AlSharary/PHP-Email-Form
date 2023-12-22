@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #183153;      /* اللون الرئيسي */
+    --secondary-color: #c5daf2;    /* اللون الثانوي */
+    --bg-color: #f2f7fd;           /* لون الخلفية */
+    --accent-color: #3078c7;        /* لون التأكيد */
+    --light-color: #FFFFFF;         /* لون النص الفاتح */
+    --dark-color: #000000;          /* لون النص الداكن */
+    --text-color: #525255;          /* لون النص */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    margin-top: 100px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: var(--light-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: auto; /* للتأكد من وسط العنصر */
+}
+
+h3 {
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+}
+
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    height: 200px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--light-color);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+/* إضافة ستايل لرسالة النجاح أو الفشل */
+#resultMessage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+#resultMessage.success {
+    background-color: #d4edda; /* لون الخلفية الأخضر */
+    color: #155724; /* لون النص الأخضر الداكن */
+}
+
+#resultMessage.error {
+    background-color: #f8d7da; /* لون الخلفية الأحمر */
+    color: #721c24; /* لون النص الأحمر الداكن */
+}
+
+/* قواعد ميديا ​​كويري لتحسين تجربة المستخدم على الأجهزة الصغيرة */
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 90%; /* تقليل العرض على الأجهزة الصغيرة */
+    }
+}
