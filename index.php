@@ -13,7 +13,7 @@
     <h3>نموذج إرسال البريد الإلكتروني</h3>
     
     <form id="emailForm" action="send_email.php" method="post">
-        <label for="to">المستلم:</label>
+        <label for="to">بريد المستلم:</label>
         <input type="email" id="to" name="to" required>
 
         <label for="subject">الموضوع:</label>
